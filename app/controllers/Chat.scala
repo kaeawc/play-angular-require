@@ -4,7 +4,6 @@ import play.api._
 import play.api.mvc._
 import models.Message
 
-
 object Chat extends Application {
 
 	/**
@@ -15,9 +14,7 @@ object Chat extends Application {
 	}
 
 	/**
-	 * Should be a WebSocket that broadcasts to all other users
+	 * TODO: Should be a WebSocket that broadcasts to all other users
 	 */
-	def message = UserAction {
-		request => user => Ok("")
-	}
+	def message = TODO
 }
