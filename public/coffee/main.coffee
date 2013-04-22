@@ -1,19 +1,17 @@
 require
 	shim:
-		'controllers/message'        : deps: ['app', 'services/message']
-		'vendor/angular-resource'    : deps: ['vendor/angular']
-		'services/message'           : deps: ['app']
-		'app'                        : deps: ['libs/angular', 'libs/angular-resource']
-		'bootstrap'                  : deps: ['app']
-		'routes'                     : deps: ['app']
-		'run'                        : deps: ['app']
-		'views'                      : deps: ['app']
+		'controllers/chat'                   : deps: ['app', 'services/chat']
+		'vendor/angular/angular-resource'    : deps: ['vendor/angular/angular']
+		'services/chat'                      : deps: ['app']
+		'app'                                : deps: ['vendor/angular/angular', 'vendor/angular/angular-resource']
+		'bootstrap'                          : deps: ['app']
+		'routes'                             : deps: ['app']
+		'run'                                : deps: ['app']
+		'views'                              : deps: ['app']
 	[
 		'require'
-		'controllers/message'
-		'routes'
-		'run'
-		'views'
-	], (require) ->
+		'bootstrap'
+		'vendor/angular/angular'
+	], (require, bootstrap) ->
 		angular.element(document).ready ->
 			require ['bootstrap']
