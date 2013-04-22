@@ -1,0 +1,5 @@
+
+GET     /                                                          controllers.Chat.connect
+POST     /chat                                                     controllers.Chat.message
+
+GET     /*file                                                     controllers.Assets.at(path="/public", file)
